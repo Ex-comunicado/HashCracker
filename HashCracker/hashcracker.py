@@ -1,12 +1,13 @@
 from os import read, system
 import sys, getopt, hashlib, time
 
-def banner():
-    system("figlet -f slant HashCracker")
-    print("Developed by: Ex-Communicado")
+# Uncomment if on Linux. No performance upgrade only makes the output look cool. Uncomment the function calls as well.
+#def banner():
+#    system("figlet -f slant HashCracker")
+#    print("Developed by: Ex-Communicado")
 
 def info():
-    banner()
+    #banner()
     print("Usage: python hashcracker.py [OPTIONS]")
     print("Help Menu:")
     print("   -h, --help; Display this menu.")
@@ -87,7 +88,7 @@ def main(argv):
     except FileNotFoundError:
         print("[!] Could not find hash file. Try again.")
         info()
-    banner()
+    #banner()
     print("\n[*] Type of Hash: %s" % hashtype.upper())
     print("[*] Hash: %s" % hash)
     print("[*] Wordlist: %s" % wordlist)
